@@ -1,0 +1,27 @@
+version: '3.7'
+services:
+  inventory_api_prod:
+    build:
+      context: ./
+      dockerfile: Dockerfile_inventory_api
+    image: inventory_api
+    ports:
+      - "6001:4000"
+    environment:
+      - PORT=4000
+      - MONGO_URL=mongodb://10.60.1.19:27017/AnalysisInventory
+    restart: always
+  inventory_api_dev:
+    build:
+      context: ./
+      dockerfile: Dockerfile_inventory_api
+    image: inventory_api
+    ports:
+      - "6002:4000"
+    environment:
+      - PORT=4000
+      - MONGO_URL=mongodb://10.60.1.66:27017/AnalysisInventory
+    restart: always
+
+
+   

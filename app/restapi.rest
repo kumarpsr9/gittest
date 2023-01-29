@@ -1,0 +1,13 @@
+###
+GET http://localhost:3300/api/advancecategory/ HTTP/1.1
+
+# POST http://localhost:3300/api/advancecategory/ HTTP/1.1
+# content-type: application/json
+
+# {
+#     "AdvCategory": "Marketing",
+#     "AdvShortCode": "MRK",
+#     "AutoDeduct": false
+# }
+
+
